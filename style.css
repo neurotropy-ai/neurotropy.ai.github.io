@@ -1,0 +1,91 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #08040f;
+  --purple:   #a855f7;
+  --purple-d: #7c3aed;
+  --border:   rgba(168,85,247,0.14);
+  --border-2: rgba(168,85,247,0.30);
+  --text:     #f0e6ff;
+  --text-muted: #b09acc;
+  --text-hint:  #6b5080;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 24px;
+  background-image:
+    radial-gradient(ellipse 700px 400px at 50% 30%, rgba(120,80,220,0.15), transparent 65%),
+    radial-gradient(ellipse 400px 300px at 80% 80%, rgba(168,85,247,0.06), transparent 60%);
+  text-align: center;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.6); }
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.description {
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+  animation: fadeUp 0.7s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 40px;
+  border: 0.5px solid var(--border-2);
+  color: var(--purple);
+  background: rgba(168,85,247,0.08);
+  animation: fadeUp 0.7s ease 0.4s forwards;
+  opacity: 0;
+}
+
+.banner-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--purple);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+footer {
+  position: fixed;
+  bottom: 24px;
+  font-size: 11px;
+  color: var(--text-hint);
+  letter-spacing: 0.3px;
+}

@@ -51,6 +51,7 @@ main {
 .logo {
   width: 220px;
   height: auto;
+  margin-top: 2cm;
   margin-bottom: 40px;
   animation: fadeUp 0.7s ease forwards;
 }
@@ -101,7 +102,7 @@ main {
   border: 0.5px solid var(--border-2);
   color: var(--purple);
   background: rgba(168,85,247,0.08);
-  margin-bottom: 17px;
+  margin-bottom: 60px;
 }
 
 .chip-dot {
@@ -127,7 +128,7 @@ main {
 }
 
 .waitlist {
-  margin-top: 28px;
+  margin-top: 80px;
   animation: fadeUp 0.7s ease 0.6s forwards;
   opacity: 0;
 }
